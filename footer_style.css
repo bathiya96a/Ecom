@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: rgb(26, 2, 2);
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    padding: 2% 0;
+}
+
+.footer-top {
+    margin: 0 auto;
+    display: block;
+    padding: 0 40px;
+}
+
+.ft-col {
+    display: inline-block;
+    margin: 0 10%;
+    padding: 20px 20px;
+}
+
+.ft-col ul li{
+   list-style: none;
+   margin: 10% 0;
+}
+
+.ft-col ul li a {
+    text-decoration: none;
+    color: #f8b7b7;
+}
+
+.footer-bottom {
+    padding: 5% 0 0 0;
+    margin-top: 4% 0;
+    text-align: center;
+    font-size: 11px;
+}

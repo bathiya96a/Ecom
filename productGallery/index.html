@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .gallery {
+
+            width: fit-content;
+            background-color: blue;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-flow: wrap; */
+            flex-direction:row;
+            padding: 20px;
+            justify-content: center;
+            
+        }
+
+        .card {
+                background-color:burlywood;
+                width:200px;
+                height: 300px;
+                border-radius:10px;
+                display: block;
+                margin: 10px 10px;
+                
+                
+                
+            }
+
+            
+        .div1 {
+            width: 80%;
+            height: 180px;
+            background-color: chartreuse;
+            margin: 10px auto;
+
+
+        }
+
+        .card-img {
+            width: 100%;
+            height:100%;
+            background-color: chocolate;
+            /* margin: 0px auto; */
+        }
+
+
+
+
+    </style>
+
+<!-- <div class="container">
+   
+</div> -->
+
+<div id="productGallery" class="gallery">
+
+</div>
+
+
+    <script>
+        const pg = document.getElementById("productGallery");
+
+        const products = [
+        {title:'title1', imageUrl:'#', description:'lorem ipsum dollar sit'},
+        {title:'title2', imageUrl:'#', description:'lorem ipsum dollar sit'},
+        {title:'title3', imageUrl:'#', description:'lorem ipsum dollar sit'},
+        {title:'title4', imageUrl:'#', description:'lorem ipsum dollar sit'},
+        {title:'title5', imageUrl:'#', description:'lorem ipsum dollar sit'},
+        {title:'title6', imageUrl:'#', description:'lorem ipsum dollar sit'},
+        {title:'title7', imageUrl:'#', description:'lorem ipsum dollar sit'},
+        ];
+
+        products.forEach(product => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+
+        //create the cards content
+        const title = document.createElement('h2');
+        title.textContent = product.title;
+        card.appendChild(title);
+
+        const div1 = document.createElement('div');
+        div1.classList.add("div1");
+        card.appendChild(div1);
+
+        const image = document.createElement('img');
+        image.src = product.imageUrl;
+        image.classList.add("card-img");
+        div1.appendChild(image);
+
+        const btn = document.createElement('button');
+        card.appendChild(btn);
+        btn.textContent = "Click Me";
+
+
+        // const description = document.createElement('p');
+        // image.src = product.imageUrl;
+        // card.appendChild(image);
+
+        // const description = document.createElement('p');
+        // description.textContent = product.description;
+        // card.appendChild(description);
+
+        pg.appendChild(card);
+        });
+    </script>
+</body>
+</html>
